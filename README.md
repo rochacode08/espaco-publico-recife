@@ -24,10 +24,10 @@ Abra o `index.html` no Chrome ou no Edge. A pasta `img/` precisa estar junto.
 
 - `index.html`: os 13 slides e as notas da fala
 - `style.css`, `script.js`: visual, animações e navegação
-- `img/`: fotos e vídeo (lista e créditos em `img/LEIA-ME.txt`)
+- `img/`: fotos e vídeo (créditos em `PARA-A-VERA.txt`)
 - `PARA-A-VERA.txt`: orientações para a apresentação
 
 ## Créditos das imagens
 
 As fotos e o vídeo são de terceiros e foram usados apenas para fins acadêmicos.
-Os créditos aparecem em cada slide e estão listados em `img/LEIA-ME.txt`.
+Os créditos aparecem em cada slide e estão listados em `PARA-A-VERA.txt`.
