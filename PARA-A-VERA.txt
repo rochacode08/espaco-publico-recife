@@ -1,0 +1,79 @@
+ANOTAÇÕES PARA A VERA — Apresentação "Localizando o espaço público"
+====================================================================
+
+COMO ABRIR E APRESENTAR
+- Leve a pasta "turis" inteira (com a pasta img dentro). Só o index.html sozinho não funciona.
+- Abra o index.html com dois cliques (Chrome ou Edge).
+- Com internet, as fontes ficam iguais às do projeto. Sem internet, tudo funciona, só muda a fonte.
+- Teclas:
+    → ou espaço ou clique ... avançar
+    ←  ...................... voltar
+    F ....................... tela cheia
+    N ....................... abre as notas (o que falar) na lateral
+    P ....................... modo apresentador: abre uma janela com as notas e um cronômetro
+                              (deixe essa janela no notebook e a apresentação no projetor)
+- Alguns slides revelam partes a cada clique (slides 3, 5, 6, 7, 8, 9, 10, 12 e 13).
+  Nas notas está marcado [Clique...] onde isso acontece.
+
+SOBRE O CONTEÚDO
+- A única fonte do conteúdo é o artigo de Rogério Proença Leite (2008).
+- O título do artigo mantém a palavra "Gentrification" porque é o nome original publicado pelo
+  autor. No resto da apresentação usamos "gentrificação" ou "enobrecimento".
+- Termos que traduzimos (para não usar inglês nos slides). Se o professor perguntar, no
+  artigo o autor usa os termos originais:
+    "gentrificação" / "enobrecimento"  = gentrification
+    "promoção estratégica da cidade"   = "marketing urbano"
+    "bares" e "casas de dança"         = "pubs" e "dancing bars"
+    "bulevar artificial"               = "artificial boulevard"
+    "perfil alternativo" (Rua da Moeda) = "perfil underground"
+- Slide 10 (debate teórico): Arendt, Sennett e a crítica do autor (p. 47–51 do artigo). Foi
+  incluído porque o professor costuma cobrar a parte teórica. As páginas estão no slide.
+- Slide 12 (Turismo): as perguntas são reflexões do grupo a partir do artigo, não conclusões do
+  autor. Vale dizer isso em voz alta.
+
+SOBRE AS IMAGENS E O VÍDEO
+- As fotos mostram as ruas como são hoje, não como eram na época analisada no artigo
+  (anos 1990 e 2000). Servem como ilustração. Se perguntarem, é só explicar isso.
+- Slide 1 (capa): Rua do Bom Jesus. Foto: Vikeph / Pexels.
+- Slide 4: vídeo de drone da Rua do Bom Jesus até o Marco Zero.
+  Autor: Evandro Bandeira (@bandeiradrones), Instagram.
+    * Toca sozinho, sem som e em repetição enquanto o slide 4 estiver aberto.
+    * Tem a marca d'água do autor e uma animação de "INSCRITO" por volta dos 8 segundos (é do
+      próprio vídeo).
+    * O vídeo é de outra pessoa: o ideal é pedir autorização ao autor para uso no trabalho
+      acadêmico. O crédito já aparece no slide.
+    * A legenda do post ("uma das ruas mais bonitas do mundo") é do autor do vídeo, não do
+      artigo. Não usar como informação do trabalho.
+- Slide 5: Rua do Bom Jesus (de dia, com a feirinha) e Rua da Moeda (à noite, mesas de bar).
+  Fonte das duas: Melhores Destinos
+    https://guia.melhoresdestinos.com.br/rua-do-bom-jesus-recife.html
+    https://guia.melhoresdestinos.com.br/rua-da-moeda-recife.html
+
+- Slide 6 (antes): foto em preto e branco da Praça Rio Branco (= Marco Zero) em 1988.
+  Crédito: Acervo URB/Prefeitura do Recife, publicada na Folha de Pernambuco
+    https://www.folhape.com.br/colunistas/inspiracao-recife/quando-o-antigo-encontra-o-novo-no-coracao-do-recife/42294/
+    * É uma foto real de antes da reforma (o Plano de Revitalização é de 1992).
+    * Combina com o que o artigo descreve: a estátua do Barão do Rio Branco no centro da praça
+      e as árvores grandes fazendo sombra (que foram arrancadas na reforma).
+    * Os prédios com cúpula ao fundo parecem ser os mesmos que aparecem no vídeo do drone — dá para
+      mostrar a comparação.
+- Slide 6 (depois): foto atual do Largo do Marco Zero, com o piso da rosa dos ventos.
+  Fonte: QuintoAndar
+    https://www.quintoandar.com.br/guias/cidades/praca-do-marco-zero/
+    * Mostra bem o que o artigo critica: largo aberto, sol forte, quase sem sombra e sem bancos,
+      pouca gente de dia. Comparar com a foto de 1988, cheia de árvores.
+
+- Slide 7: duas fotos de atos políticos no Marco Zero, de lados opostos (uma em cima da outra).
+    1) Ato pelo afastamento (impeachment) de Dilma, 13/12/2015 (verde e amarelo).
+       Foto: Reprodução/TV Globo — g1 Pernambuco
+       https://g1.globo.com/pernambuco/noticia/2015/12/no-recife-ato-pelo-impeachment-reune-manifestantes-no-marco-zero.html
+    2) Ato pedindo eleições diretas durante o governo Temer (vermelho).
+       Foto: Marina Meireles/G1 — g1 Pernambuco
+       https://g1.globo.com/pernambuco/noticia/grupo-se-reune-no-centro-do-recife-para-exigir-saida-do-presidente-temer-e-pedir-eleicoes-diretas.ghtml
+    * ATENÇÃO: nenhuma das duas é a comemoração do PT em 2000 citada no artigo. Vale dizer isso
+      em voz alta, porque o texto do slide fala de 2000.
+    * Por que duas fotos: o artigo diz que o Marco Zero virou um espaço para "diferentes visões de
+      mundo e distintas reivindicações de validades" (p. 41). Mostrar atos de lados opostos no
+      mesmo lugar ilustra isso e deixa a apresentação equilibrada, sem tomar partido.
+
+

@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Espaço Público no Recife Antigo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400..800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<main class="stage" id="stage">
+
+<!-- ================= 1. CAPA ================= -->
+<section class="slide dark" data-title="Capa" style="display:grid;grid-template-columns:1040px 576px;gap:48px;padding:128px">
+  <svg class="compass" viewBox="0 0 200 200" aria-hidden="true">
+    <g fill="none" stroke="#E8956B" stroke-width=".8">
+      <circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="80"/><circle cx="100" cy="100" r="30"/>
+    </g>
+    <g fill="#E8956B">
+      <polygon points="100,4 108,92 100,100 92,92"/><polygon points="100,196 92,108 100,100 108,108"/>
+      <polygon points="4,100 92,92 100,100 92,108"/><polygon points="196,100 108,108 100,100 108,92"/>
+      <polygon points="32,32 96,92 100,100 92,96" opacity=".6"/><polygon points="168,168 104,108 100,100 108,104" opacity=".6"/>
+      <polygon points="168,32 104,92 100,100 108,96" opacity=".6"/><polygon points="32,168 96,108 100,100 92,104" opacity=".6"/>
+    </g>
+  </svg>
+  <div style="display:flex;flex-direction:column;justify-content:space-between;gap:40px;position:relative">
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <p class="eyebrow a fade" style="--d:0">Cultura urbana · Curso de Turismo · CEFET/RJ</p>
+      <h1 class="a" style="--d:1">Localizando o espaço público: <i>Gentrification</i> e cultura urbana</h1>
+      <p class="a" style="--d:3;font-size:32px">Uma análise da revitalização urbana e das disputas pelo espaço público no Recife Antigo</p>
+    </div>
+    <div class="a fade" style="--d:5;display:flex;flex-direction:column;gap:10px;border-top:2px solid #3E4D52;padding-top:28px">
+      <p style="font-size:28px;font-weight:700;color:var(--paper)">Rogério Proença Leite</p>
+      <p class="small">Revista Crítica de Ciências Sociais, nº 83, 2008</p>
+      <p class="small" style="color:var(--terra-l)">Apresentação: Vera Lúcia Rocha Lopes</p>
+    </div>
+  </div>
+  <div class="ph a right" style="--d:2" data-img="img/pexels-vikeph-25946169.jpg">
+    <p class="tag light">Imagem · Capa</p>
+    <p><b>O que mostrar:</b> o Bairro do Recife Antigo com pessoas na rua, casarões históricos coloridos e movimento de pedestres.</p>
+    <p><b>Dica:</b> uma foto real (com crédito) funciona melhor que imagem gerada.</p>
+    <p><b>Comando para IA:</b> <i>Fotografia documental, vertical, de uma rua de paralelepípedos em centro histórico do Nordeste brasileiro ao entardecer, sobrados coloniais coloridos de dois andares, pessoas caminhando e conversando, luz dourada, tons quentes.</i></p>
+    <p class="file">Salve como img/pexels-vikeph-25946169.jpg</p>
+    <p class="credit">Foto: Vikeph / Pexels</p>
+  </div>
+  <div class="aside-notes">Boa tarde a todos. Vamos apresentar o artigo "Localizando o espaço público: Gentrification e cultura urbana", de Rogério Proença Leite, publicado em 2008 na Revista Crítica de Ciências Sociais. O texto analisa a revitalização do Bairro do Recife Antigo e usa esse caso para discutir uma pergunta maior: o que torna um espaço da cidade realmente público. Para nós, do Turismo, o artigo é interessante porque trata de patrimônio, consumo cultural e de quem tem lugar nas áreas revitalizadas.</div>
+</section>
+
+<!-- ================= 2. TEMA ================= -->
+<section class="slide" data-title="Tema central do artigo" style="justify-content:space-between">
+  <div class="head" style="gap:20px">
+    <p class="eyebrow a fade">Tema central do artigo</p>
+    <h2 class="big a" style="--d:1">O que faz um espaço urbano se tornar, de fato, <i>público</i>?</h2>
+    <p class="a" style="--d:3;font-size:30px">Contra o discurso da “morte da vida pública”, o autor propõe distinguir três termos que costumam ser tratados como sinônimos: <b class="k">espaço urbano</b>, <b class="k">esfera pública</b> e <b class="k">espaço público</b>.</p>
+  </div>
+  <div class="row">
+    <div class="card top-terra grow a" style="--d:5">
+      <h3>Aberto ≠ público</h3>
+      <p style="font-size:26px">Uma rua ou praça fisicamente acessível não é, por si só, um espaço público.</p>
+    </div>
+    <div class="card top-teal grow a" style="--d:6">
+      <h3>Usos e interações</h3>
+      <p style="font-size:26px">Importa como as pessoas usam o lugar, convivem, expõem diferenças e buscam reconhecimento.</p>
+    </div>
+    <div class="card top-ink grow a" style="--d:7">
+      <h3>Estudo de caso</h3>
+      <p style="font-size:26px">A “revitalização” do Bairro do Recife Antigo (PE), iniciada nos anos 1990.</p>
+    </div>
+  </div>
+  <div class="aside-notes">A pergunta que guia o artigo é: o que faz um espaço urbano se tornar efetivamente público? O autor parte de uma crítica: muita gente fala da "morte da vida pública" porque confunde espaço urbano, esfera pública e espaço público. Para ele, não basta uma rua ou uma praça estarem abertas: é preciso olhar como as pessoas usam esses espaços, como interagem, mostram suas diferenças e pedem reconhecimento. Para discutir isso, ele analisa um caso concreto, a revitalização do Bairro do Recife Antigo, iniciada nos anos 90.</div>
+</section>
+
+<!-- ================= 3. GENTRIFICAÇÃO ================= -->
+<section class="slide alt" data-title="O que é gentrificação?">
+  <div class="head">
+    <p class="eyebrow a fade">Conceito</p>
+    <h2 class="a" style="--d:1">O que é <i>gentrificação</i>?</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 560px;gap:56px;align-items:start">
+    <div class="col" style="gap:24px">
+      <p class="a left" style="--d:2"><b class="k">Enobrecimento:</b> eleger certos espaços da cidade como centralidades e transformá-los em áreas de investimento público e privado (Harvey; Featherstone; Smith).</p>
+      <p class="a left" style="--d:3"><b class="k">Promoção estratégica da cidade:</b> o patrimônio vira recurso estratégico na “concorrência inter-cidades” e se torna uma mercadoria cultural.</p>
+      <p class="a left" style="--d:4"><b class="k">“Embelezamento estratégico”:</b> termo de Walter Benjamin sobre as reformas de Haussmann em Paris, retomado para as cidades históricas de hoje.</p>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <p class="flow-box a pop" style="--d:3">Sítio histórico degradado</p>
+      <div class="arrow-down a drawY" style="--d:4"></div>
+      <p class="flow-box a pop" style="--d:5">Investimento público + privado</p>
+      <div class="arrow-down a drawY" style="--d:6"></div>
+      <p class="flow-box a pop" style="--d:7">Patrimônio como mercadoria cultural</p>
+      <div class="arrow-down a drawY" style="--d:8"></div>
+      <p class="flow-box end a pop" style="--d:9">Entretenimento, turismo e consumo</p>
+    </div>
+  </div>
+  <p class="band step"><b>Ponto crítico:</b> a revitalização mudou a paisagem do bairro, mas não alterou as desigualdades. Segundo o autor, parece até tê-las aprofundado.</p>
+  <div class="aside-notes">A gentrificação, também chamada de enobrecimento, é o processo em que certas áreas da cidade são escolhidas como centralidades e recebem investimentos públicos e privados. O autor relaciona isso à promoção estratégica das cidades: as cidades disputam recursos e visitantes, e o patrimônio histórico vira um recurso estratégico, quase uma mercadoria cultural. Ele usa a expressão "embelezamento estratégico", de Walter Benjamin, que comentava as reformas de Haussmann em Paris. [Clique para revelar o ponto crítico.] Deixar uma área bonita e valorizada não significa reduzir desigualdades. No Recife, segundo o autor, as distâncias sociais parecem ter se aprofundado.</div>
+</section>
+
+<!-- ================= 4. RECIFE ================= -->
+<section class="slide" data-title="O Bairro do Recife Antigo" style="display:grid;grid-template-columns:446px 1fr;gap:72px">
+  <div class="ph a left" style="--d:1" data-video="img/drone.mp4">
+    <p class="tag terra">Vídeo · Sobrevoo</p>
+    <p>Sobrevoo de drone da Rua do Bom Jesus ao Marco Zero.</p>
+    <p class="file">Salve como img/drone.mp4</p>
+    <p class="credit">Vídeo: Evandro Bandeira (@bandeiradrones)</p>
+  </div>
+  <div class="col" style="gap:28px">
+    <div class="head">
+      <p class="eyebrow a fade">Estudo de caso</p>
+      <h2 class="a" style="--d:1">O Bairro do Recife Antigo</h2>
+    </div>
+    <ul class="list">
+      <li class="a" style="--d:2"><b class="k">Anos 1990:</b> início do Plano de Revitalização do Bairro do Recife.</li>
+      <li class="a" style="--d:3"><b class="k">Gestão mista:</b> Prefeitura, Governo do Estado e BID (via PRODETUR e Programa MinC/Monumenta).</li>
+      <li class="a" style="--d:4"><b class="k">Sobrados reformados</b> “com cores berrantes” passam a abrigar bares, restaurantes e casas de dança.</li>
+      <li class="a" style="--d:5"><b class="k">Moradores residuais</b> dos andares superiores foram removidos.</li>
+      <li class="a" style="--d:6"><b class="k">Meta do Plano:</b> um “espaço de lazer e diversão”, criando um “espetáculo urbano” (AD/DIPER, 1992).</li>
+    </ul>
+  </div>
+  <div class="aside-notes">O caso analisado é o Bairro do Recife Antigo. O vídeo ao lado mostra um sobrevoo da Rua do Bom Jesus até o Marco Zero, os dois espaços que vamos ver a seguir. A revitalização começou nos anos 90 e é vista como um marco porque usou um modelo misto de gestão, com parcerias entre poder público e iniciativa privada: Prefeitura, Governo do Estado e o BID, por meio do PRODETUR e do Programa Monumenta. Os sobrados foram reformados com cores fortes e viraram bares, restaurantes e casas de dança; antigos moradores dos andares de cima foram removidos. O plano queria um espaço de lazer e diversão, um "espetáculo urbano". Isso se liga diretamente ao turismo e ao consumo cultural, mas o foco do autor vai além: ele quer entender o que aconteceu com o espaço público.</div>
+</section>
+
+<!-- ================= 5. BOM JESUS x MOEDA ================= -->
+<section class="slide" data-title="Rua do Bom Jesus × Rua da Moeda" style="gap:32px">
+  <div class="head">
+    <p class="eyebrow a fade">Diferentes usos do bairro</p>
+    <h2 class="a" style="--d:1">Rua do Bom Jesus × Rua da Moeda</h2>
+  </div>
+  <div class="row grow" style="gap:48px">
+    <div class="col grow a left" style="--d:2">
+      <div class="ph" style="height:230px" data-img="img/bom-jesus.jpg">
+        <p class="tag terra">Imagem · Rua do Bom Jesus</p>
+        <p><b>Comando para IA:</b> <i>Rua histórica à noite com sobrados coloridos iluminados, mesas de bares na calçada, jovens e casais, clima de festa.</i></p>
+        <p class="file">Salve como img/bom-jesus.jpg</p>
+        <p class="credit">Foto: Melhores Destinos</p>
+      </div>
+      <div style="display:flex;gap:16px;align-items:center">
+        <h3>Pólo Bom Jesus</h3><span class="pill">lugar de consumo</span>
+      </div>
+      <ul class="list">
+        <li style="font-size:26px">Centro do processo: o espaço mais enobrecido do bairro.</li>
+        <li style="font-size:26px">Bares, restaurantes, danceterias; mesas nas calçadas.</li>
+        <li style="font-size:26px">Após as 18h: trânsito fechado, cavaletes e segurança formavam um bulevar artificial.</li>
+      </ul>
+    </div>
+    <div class="col grow step">
+      <div class="ph" style="height:230px" data-img="img/moeda.jpg">
+        <p class="tag teal">Imagem · Rua da Moeda</p>
+        <p><b>Comando para IA:</b> <i>Rua antiga e mais rústica à noite, fachadas sem reforma, pequenos bares alternativos, jovens em grupos na calçada, clima alternativo.</i></p>
+        <p class="file">Salve como img/moeda.jpg</p>
+        <p class="credit">Foto: Melhores Destinos</p>
+      </div>
+      <div style="display:flex;gap:16px;align-items:center">
+        <h3>Pólo Moeda</h3><span class="pill teal">lugar de fuga e refúgio</span>
+      </div>
+      <ul class="list teal">
+        <li style="font-size:26px">Ocupação espontânea, à revelia do Plano, em área ainda não “revitalizada”.</li>
+        <li style="font-size:26px">Bares para público jovem, perfil alternativo: a “Berlim Oriental”.</li>
+        <li style="font-size:26px">Destino de quem não podia, ou não queria, consumir no Bom Jesus.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="aside-notes">Dentro do mesmo bairro surgiram usos muito diferentes. A Rua do Bom Jesus virou o centro da revitalização: bares, restaurantes, danceterias, mesas na calçada. À noite o trânsito era fechado com cavaletes e um esquema de segurança, criando o que o autor chama de bulevar artificial, uma tentativa de disciplinar o uso do espaço. [Clique para revelar a Rua da Moeda.] Já a Rua da Moeda se desenvolveu à revelia do plano, numa área ainda não reformada, com bares alternativos para jovens; era chamada de "Berlim Oriental". O autor a descreve como um "ponto de fuga" para quem não podia ou não queria participar do consumo do Bom Jesus. Ou seja: nem todos participam da área revitalizada da mesma forma.</div>
+</section>
+
+<!-- ================= 6. MARCO ZERO ================= -->
+<section class="slide alt" data-title="O Largo do Marco Zero" style="gap:32px">
+  <div class="head">
+    <p class="eyebrow a fade">O Largo do Marco Zero</p>
+    <h2 class="a" style="--d:1">De praça de encontro a palco de espetáculos</h2>
+  </div>
+  <div class="row grow" style="gap:24px;align-items:stretch">
+    <div class="col grow a left" style="--d:2;gap:18px">
+      <div class="ph" style="height:290px;background:#E0D6C6" data-img="img/marco-zero-antes.png" data-pos="center 12%">
+        <p class="tag teal">Imagem · Antes</p>
+        <p>Foto antiga da Praça Rio Branco (Marco Zero) antes da reforma.</p>
+        <p class="file">Salve como img/marco-zero-antes.png</p>
+        <p class="credit">Praça Rio Branco, 1988 · Acervo URB/PCR</p>
+      </div>
+      <h3 style="color:var(--teal)">Antes da reforma</h3>
+      <ul class="list teal">
+        <li style="font-size:26px">Pequena praça com árvores e bancos de madeira.</li>
+        <li style="font-size:26px">Sombra para conversar a qualquer hora.</li>
+        <li style="font-size:26px">Lugar de <b class="k">permanência</b>, não só de passagem.</li>
+      </ul>
+    </div>
+    <div class="arrow step" style="width:72px"></div>
+    <div class="col grow step" style="gap:18px">
+      <div class="ph" style="height:290px;background:#E0D6C6" data-img="img/marco-zero-depois.webp" data-pos="center 30%">
+        <p class="tag terra">Imagem · Depois</p>
+        <p>Foto atual do Largo do Marco Zero, com o piso da rosa dos ventos.</p>
+        <p class="file">Salve como img/marco-zero-depois.webp</p>
+        <p class="credit">Foto: QuintoAndar</p>
+      </div>
+      <h3 style="color:var(--terra)">Depois da reforma</h3>
+      <ul class="list">
+        <li style="font-size:26px">Árvores arrancadas, bancos removidos; vira um Largo.</li>
+        <li style="font-size:26px">Piso com rosa dos ventos (Cícero Dias): “Eu vi o mundo... ele começava no Recife”.</li>
+        <li style="font-size:26px">Sem sombra: vazio de dia, grandes eventos à noite.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="callout step" style="font-size:26px">Mas a forma física <b>não determina</b> todos os usos: à noite, o Largo passou a reunir grupos que raramente se misturavam nos outros pólos.</p>
+  <div class="aside-notes">O Marco Zero é o centro da análise. Antes da reforma era uma pracinha com árvores e bancos de madeira, onde se podia conversar à sombra a qualquer hora; era um lugar de permanência, com a estátua do Barão do Rio Branco olhando para o mar. [Clique: seta e "depois".] Com a reforma, as árvores foram arrancadas, os bancos removidos e o espaço virou um largo amplo, com uma grande rosa dos ventos de Cícero Dias no piso. O plano falava em um "espaço público para reunião e o espetáculo". Para o autor, trocou-se um espaço de encontro por um espaço de espetáculos: sem sombra e sem bancos, ele ficava vazio de dia. [Clique: frase final.] Mas, à noite, o Largo reuniu públicos muito diversos, mostrando que a forma física não decide sozinha como as pessoas usam o espaço.</div>
+</section>
+
+<!-- ================= 7. CONTRA-USOS ================= -->
+<section class="slide dark" data-title="Os contra-usos do espaço" style="display:grid;grid-template-columns:1fr 560px;gap:64px">
+  <div class="col" style="gap:32px">
+    <div class="head">
+      <p class="eyebrow a fade">Conceito-chave</p>
+      <h2 class="a" style="--d:1">Os contra-usos do espaço</h2>
+    </div>
+    <p class="quote a" style="--d:2">“ações deliberadas de subversão prática e/ou simbólica dos usos esperados para os espaços enobrecidos”</p>
+    <div class="row" style="gap:20px;align-items:center">
+      <div class="card grow a" style="--d:4;padding:24px 28px;gap:8px">
+        <p class="tag" style="color:var(--mist)">Uso esperado</p>
+        <p style="font-size:26px;color:var(--paper)">Lazer, diversão e “espetáculo urbano”</p>
+      </div>
+      <div class="arrow light a draw" style="--d:6"></div>
+      <div class="card grow a" style="--d:7;padding:24px 28px;gap:8px">
+        <p class="tag light">Contra-uso</p>
+        <p style="font-size:26px;color:var(--paper)">Atos pela paz, passeatas pelos direitos humanos</p>
+      </div>
+    </div>
+    <div class="col step" style="gap:10px">
+      <h3 style="font-size:32px;color:var(--terra-l)">Outubro de 2000: “Recife, uma cidade vermelha”</h3>
+      <p style="font-size:26px">João Paulo (PT) vence a eleição para prefeito. Militantes de vermelho, com trio elétrico, ocupam o Marco Zero, reformado pelo PFL como ícone da cidade enobrecida. Para o autor, o maior “ruído visual” que o bairro poderia ter.</p>
+    </div>
+  </div>
+  <div class="col a right" style="--d:3;gap:16px">
+    <p class="tag light">Mesmo espaço, lados opostos</p>
+    <div class="ph" style="height:356px" data-img="img/impechemant-dilma.webp" data-pos="center 40%">
+      <p class="tag light">Imagem · Ato de 2015</p>
+      <p class="file">Salve como img/impechemant-dilma.webp</p>
+      <p class="credit">Ato pelo afastamento (impeachment) de Dilma, 13/12/2015 · Foto: Reprodução/TV Globo (G1 PE)</p>
+    </div>
+    <div class="ph" style="height:356px" data-img="img/ato-marco-zero.avif" data-pos="center 45%">
+      <p class="tag light">Imagem · Ato no governo Temer</p>
+      <p class="file">Salve como img/ato-marco-zero.avif</p>
+      <p class="credit">Ato por eleições diretas, governo Temer · Foto: Marina Meireles/G1</p>
+    </div>
+  </div>
+  <div class="aside-notes">Aqui está o conceito central do autor: os contra-usos. São ações deliberadas que subvertem, na prática ou no plano simbólico, os usos esperados para os espaços enobrecidos. O plano queria o Bairro como espaço de lazer e espetáculo, e conseguiu. Mas o Marco Zero também passou a receber manifestações pela paz e passeatas pelos direitos humanos, coisa que o bairro nunca tinha tido. As fotos ao lado mostram esse uso político em dois momentos mais recentes, de lados opostos: um ato pelo afastamento (impeachment) de Dilma, em 2015, e um ato pedindo eleições diretas no governo Temer. Nenhuma delas é a comemoração de 2000. O autor diz que o Marco Zero se tornou um espaço para "diferentes visões de mundo e distintas reivindicações"; as duas fotos mostram exatamente isso. [Clique para revelar o caso de 2000.] O exemplo mais forte é de outubro de 2000: o PT venceu a eleição para prefeito com João Paulo, e a comemoração foi justamente no Marco Zero, um espaço reformado pelo PFL como ícone da cidade enobrecida. O Diário de Pernambuco estampou: "Recife, uma cidade vermelha". Para o autor, foi uma reapropriação simbólica e política: a cidade pode ser ressignificada por quem a usa.</div>
+</section>
+
+<!-- ================= 8. LUGAR ================= -->
+<section class="slide" data-title="Do espaço físico ao lugar" style="gap:28px">
+  <div class="head">
+    <p class="eyebrow a fade">Conceito</p>
+    <h2 class="a" style="--d:1">Do espaço físico ao <i>lugar</i></h2>
+  </div>
+  <p class="a" style="--d:2"><b class="k">Lugar</b> = uma demarcação física e/ou simbólica cujos usos lhe atribuem <b class="k">sentidos convergentes</b>, orientando as ações sociais e sendo delimitado por elas.</p>
+  <div class="row" style="gap:16px;align-items:center">
+    <div class="card grow a pop" style="--d:3;padding:22px 24px;gap:6px;border:2px solid var(--ink)"><p style="font-weight:700;color:var(--ink)">Espaço físico</p><p class="small" style="color:var(--text-2)">ruas, praças, sobrados</p></div>
+    <div class="arrow a draw" style="--d:4;width:56px"></div>
+    <div class="card grow a pop" style="--d:5;padding:22px 24px;gap:6px;border:2px solid var(--ink)"><p style="font-weight:700;color:var(--ink)">Práticas e usos</p><p class="small" style="color:var(--text-2)">o que as pessoas fazem ali</p></div>
+    <div class="arrow a draw" style="--d:6;width:56px"></div>
+    <div class="card grow a pop" style="--d:7;padding:22px 24px;gap:6px;border:2px solid var(--ink)"><p style="font-weight:700;color:var(--ink)">Sentidos</p><p class="small" style="color:var(--text-2)">significados partilhados</p></div>
+    <div class="arrow a draw" style="--d:8;width:56px"></div>
+    <div class="card inverse grow a pop" style="--d:9;padding:22px 24px;gap:6px"><p style="font-weight:700;color:var(--paper)">Lugar</p><p class="small">identidade e fronteiras</p></div>
+  </div>
+  <p class="small a fade" style="--d:10;color:var(--teal);font-weight:600">Relação reflexiva: o lugar, depois de formado, também orienta as ações de quem o usa.</p>
+  <div class="row step" style="gap:24px">
+    <div class="grow callout" style="padding:4px 0 4px 20px"><p style="font-size:26px;font-weight:700;color:var(--ink)">Rua do Bom Jesus</p><p class="small">lugar de consumo</p></div>
+    <div class="grow callout teal" style="padding:4px 0 4px 20px"><p style="font-size:26px;font-weight:700;color:var(--ink)">Rua da Moeda</p><p class="small">lugar de fuga e refúgio</p></div>
+    <div class="grow callout" style="padding:4px 0 4px 20px;border-color:var(--ink)"><p style="font-size:26px;font-weight:700;color:var(--ink)">Favela do Rato</p><p class="small">lugar de refúgio e morada</p></div>
+  </div>
+  <p class="box-soft step" style="font-size:26px">Convergência de sentidos <b class="k">não é consenso</b>: basta uma “possibilidade de entendimento”. Fronteiras são negociadas no dia a dia, e um mesmo espaço pode abrigar vários lugares.</p>
+  <div class="aside-notes">Para explicar essas diferenças, o autor usa o conceito de lugar. Um espaço físico vira lugar quando as práticas das pessoas lhe dão sentidos que convergem, e esse lugar, por sua vez, passa a orientar as ações de quem o frequenta: é uma relação de mão dupla. [Clique: exemplos.] No Recife Antigo, a Rua do Bom Jesus era um lugar de consumo, a Rua da Moeda um lugar de fuga e refúgio, e a Favela do Rato um lugar de refúgio e moradia. [Clique: nota final.] Importante: convergência de sentidos não quer dizer consenso; basta haver um entendimento mínimo sobre o que aquele lugar representa. As fronteiras entre lugares não são fixas; são negociadas no cotidiano, e um mesmo espaço pode ser vários lugares ao mesmo tempo.</div>
+</section>
+
+<!-- ================= 9. CONCEITOS ================= -->
+<section class="slide alt" data-title="Espaço urbano, esfera pública e espaço público" style="gap:36px">
+  <div class="head">
+    <p class="eyebrow a fade">Três termos, não sinônimos</p>
+    <h2 class="a" style="--d:1">Espaço urbano, esfera pública e espaço público</h2>
+  </div>
+  <div class="row" style="gap:20px;align-items:stretch">
+    <div class="card top-grey grow a" style="--d:2">
+      <p class="tag">o espaço</p>
+      <h3>Espaço urbano</h3>
+      <p style="font-size:26px">Dimensão física da cidade: ruas, praças, logradouros de propriedade pública.</p>
+      <p class="small" style="color:var(--text-2)"><i>A rua “é sempre rua, vazia ou não”.</i></p>
+    </div>
+    <p class="op step">+</p>
+    <div class="card top-teal grow step">
+      <p class="tag teal">a ação</p>
+      <h3>Esfera pública</h3>
+      <p style="font-size:26px">Comunicação, debate e participação; não depende de um local físico (pode ser midiática ou virtual).</p>
+      <p class="small" style="color:var(--text-2)"><i>Um “contexto de relações difuso” (Costa, 2002).</i></p>
+    </div>
+    <p class="op step">=</p>
+    <div class="card inverse grow step" style="border-top:8px solid var(--terra)">
+      <p class="tag light">espaço + ação</p>
+      <h3>Espaço público</h3>
+      <p style="font-size:26px">Espaço urbano onde ações atribuem sentidos: interação, visibilidade, contestação.</p>
+      <p class="small"><i>Exemplo: o Largo do Marco Zero.</i></p>
+    </div>
+  </div>
+  <p class="callout step">Ruas e praças abertas são condição <b>necessária, mas não suficiente</b>: sem agentes e sem comunicação política, continuam sendo apenas espaço urbano.</p>
+  <div class="aside-notes">Este é o coração teórico do artigo. O autor lembra que a expressão "espaço público" é usada com pelo menos três sentidos (Gulick, 1998): propriedade pública do Estado, espaço-signo das relações de poder e esfera pública. Por isso ele diferencia três termos que muita gente usa como sinônimos. Espaço urbano é a dimensão física: ruas, praças, logradouros. [Clique.] Esfera pública é a dimensão da comunicação, do debate e da participação, que nem precisa de um lugar físico; pode ser na mídia, por exemplo. [Clique.] E espaço público é o encontro das duas coisas: um espaço urbano onde acontecem ações que lhe dão sentido, com interação, visibilidade e contestação. [Clique.] Por isso, uma rua aberta e movimentada é condição necessária, mas não suficiente. Sem pessoas agindo e se comunicando politicamente ali, a rua continua sendo só espaço urbano. O Marco Zero é o exemplo de espaço urbano que se tornou espaço público.</div>
+</section>
+
+<!-- ================= 10. DEBATE TEÓRICO ================= -->
+<section class="slide dark" data-title="O espaço público morreu? Arendt, Sennett e a crítica do autor" style="gap:32px">
+  <div class="head">
+    <p class="eyebrow a fade">Debate teórico</p>
+    <h2 class="a" style="--d:1">O espaço público morreu?</h2>
+  </div>
+  <div class="row" style="gap:24px;align-items:stretch">
+    <div class="card grow a" style="--d:2;gap:12px">
+      <p class="tag light">Hannah Arendt</p>
+      <p style="font-size:26px;color:var(--paper)">O público é, antes de tudo, o que <b>“pode ser visto e ouvido por todos”</b>, num “mundo comum” compartilhado.</p>
+      <p class="small" style="color:#9FB0B3">Arendt (1987: 67), citada na p. 47</p>
+    </div>
+    <div class="card grow a" style="--d:3;gap:12px">
+      <p class="tag light">Richard Sennett</p>
+      <p style="font-size:26px;color:var(--paper)">Diagnóstico de “declínio do homem público”: a <b>ideologia da intimidade</b> teria substituído a cultura pública, deixando um “espaço público morto”.</p>
+      <p class="small" style="color:#9FB0B3">Sennett (1998), discutido nas p. 47 e 48</p>
+    </div>
+    <div class="card grow step" style="gap:12px;border:2px solid var(--terra-l)">
+      <p class="tag light">A crítica de Leite</p>
+      <p style="font-size:26px;color:var(--paper)">O esquema de Sennett permite chamar de “espaço público” qualquer espaço urbano, mesmo sem interação, e assim <b>não distingue quando um espaço se torna público</b> ou deixa de ser.</p>
+      <p class="small" style="color:#9FB0B3">p. 48</p>
+    </div>
+  </div>
+  <div class="row step" style="gap:24px;align-items:stretch">
+    <p class="quote grow" style="font-size:28px">“Mesmo essa fragmentação da cultura urbana em guetos e nichos não elimina necessariamente o sentido público da vida urbana.” <span style="font-style:normal;font-family:var(--sans);font-size:24px;color:var(--terra-l)">(p. 51)</span></p>
+    <p class="grow" style="font-size:26px">A tensão entre <b style="color:var(--paper)">público e privado</b> sempre fez parte da formação do espaço público, como mostram Arendt e Habermas (p. 51).</p>
+  </div>
+  <div class="aside-notes">Aqui entra a discussão teórica que sustenta o artigo. O autor começa dizendo que muitos textos sobre espaço público parecem uma "literatura da perda", que anuncia a morte da vida pública. Ele dialoga com dois autores clássicos. Para Hannah Arendt, o público é o que pode ser visto e ouvido por todos, num mundo comum. Já Richard Sennett, no livro "O declínio do homem público", diz que a ideologia da intimidade substituiu a cultura pública e deixou um "espaço público morto". [Clique.] O autor critica Sennett: o esquema dele permite chamar qualquer rua ou praça de espaço público, mesmo sem nenhuma interação, e aí não dá para saber quando um espaço se torna público ou deixa de ser. Sennett também não esclarece se o espaço público morto é causa ou consequência da territorialização da cidade. [Clique.] Para o autor, a tensão entre o público e o privado sempre fez parte do espaço público, como mostram Arendt e Habermas. Por isso, mesmo uma cidade fragmentada em guetos e nichos não perde necessariamente o sentido público. É por isso que o caso do Marco Zero importa: ele mostra que a vida pública não morreu, ela mudou de forma.</div>
+</section>
+
+<!-- ================= 11. CIDADANIA ================= -->
+<section class="slide" data-title="O conflito faz parte do espaço público" style="gap:32px">
+  <div class="head">
+    <p class="eyebrow a fade">Cidadania e conflito</p>
+    <h2 class="a" style="--d:1">O conflito faz parte do espaço público</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:720px 1fr;gap:48px;align-items:start">
+    <div class="card inverse a left" style="--d:2;padding:40px;gap:16px">
+      <p class="quote" style="color:var(--paper)">“Ao contrário de perder sua prerrogativa política com o litígio, o espaço público pode se constituir exatamente no ponto onde as discordâncias afloram.”</p>
+      <p class="small" style="color:var(--terra-l)">Leite (2008, p. 51)</p>
+    </div>
+    <div class="col" style="gap:22px">
+      <p class="a right" style="--d:3;font-size:26px"><b class="k">Reconhecimento:</b> os lugares querem “tornar-se visíveis socialmente, em sua diferença” (Martín-Barbero).</p>
+      <p class="a right" style="--d:4;font-size:26px"><b class="k">Desentendimento (Rancière):</b> grupos que entendem e não entendem a mesma coisa nas mesmas palavras: é a base da comunicação política.</p>
+      <p class="a right" style="--d:5;font-size:26px"><b class="k">Assimetrias:</b> o espaço público precisa suportar desigualdades de fala e participação.</p>
+    </div>
+  </div>
+  <div class="col" style="gap:14px">
+    <p class="tag teal a fade" style="--d:6">Quem se encontrava no Largo à noite, segundo o autor</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <span class="pill soft a pop" style="--d:7">Frequentadores do Bom Jesus</span>
+      <span class="pill soft a pop" style="--d:8">Público da Moeda</span>
+      <span class="pill soft a pop" style="--d:9">Travestis e prostitutas</span>
+      <span class="pill soft a pop" style="--d:10">Camadas populares</span>
+      <span class="pill soft a pop" style="--d:11">Jovens funkeiros</span>
+      <span class="pill soft a pop" style="--d:12">Turistas</span>
+      <span class="pill soft a pop" style="--d:13">Famílias e idosos</span>
+      <span class="pill soft a pop" style="--d:14">Meninos em situação de rua</span>
+      <span class="pill soft a pop" style="--d:15">Catadoras de latinhas</span>
+    </div>
+  </div>
+  <div class="aside-notes">Para o autor, o espaço público não é um lugar de harmonia: é onde as diferenças, interesses e opiniões convivem e se enfrentam. O conflito não destrói o caráter público; pelo contrário, o espaço público pode surgir exatamente onde as discordâncias aparecem. Ele se apoia em Martín-Barbero, para quem os grupos querem ser reconhecidos e se tornar visíveis em sua diferença, e em Rancière, com a ideia de "desentendimento": as pessoas usam as mesmas palavras, mas entendem coisas diferentes. Ele também lembra que a participação é desigual, e o espaço público precisa suportar isso. O Marco Zero mostra isso: à noite, reunia grupos muito diferentes que quase não se misturavam nos outros pólos do bairro.</div>
+</section>
+
+<!-- ================= 12. TURISMO ================= -->
+<section class="slide alt" data-title="Relação com o Turismo" style="gap:32px">
+  <div class="head">
+    <p class="eyebrow a fade">Relação com o Turismo</p>
+    <h2 class="a" style="--d:1">Perguntas para o turismo urbano</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div class="card a" style="--d:2;flex-direction:row;gap:24px"><p class="op" style="font-size:44px;align-self:start">1</p><p style="color:var(--ink)">A revitalização de uma área histórica beneficia <b>quais grupos sociais</b>?</p></div>
+    <div class="card step" style="flex-direction:row;gap:24px"><p class="op" style="font-size:44px;align-self:start">2</p><p style="color:var(--ink)">Transformar ruas e praças em espaços de lazer e consumo pode <b>limitar outros usos</b>?</p></div>
+    <div class="card step" style="flex-direction:row;gap:24px"><p class="op" style="font-size:44px;align-self:start">3</p><p style="color:var(--ink)">Como conciliar patrimônio, turismo, <b>convivência cotidiana</b> e participação da população?</p></div>
+    <div class="card step" style="flex-direction:row;gap:24px"><p class="op" style="font-size:44px;align-self:start">4</p><p style="color:var(--ink)">Qual o papel de <b>moradores e usuários</b> na construção da identidade de um destino?</p></div>
+  </div>
+  <p class="callout teal small a fade" style="--d:4"><b>Nota:</b> estas são reflexões do grupo a partir do artigo, e não conclusões do autor, nem regras válidas para todo projeto de revitalização.</p>
+  <div class="aside-notes">Agora trazemos o artigo para o nosso campo. O texto não é um estudo de turismo em si, mas toca em temas centrais para nós: patrimônio, consumo cultural e uso de áreas históricas por visitantes. Cada clique revela uma pergunta. Primeiro, quem se beneficia de uma revitalização? Segundo, transformar ruas e praças em espaços de lazer e consumo pode limitar outras formas de uso, como vimos no Bom Jesus? Terceiro, como conciliar valorização do patrimônio, turismo, vida cotidiana e participação da população? E quarto, qual o papel de moradores e usuários na identidade de um destino? Vale reforçar: são reflexões nossas a partir do artigo, não conclusões do autor nem regras para toda revitalização.</div>
+</section>
+
+<!-- ================= 13. CONCLUSÃO ================= -->
+<section class="slide" data-title="Conclusão e referência" style="justify-content:space-between;gap:32px">
+  <div class="head">
+    <p class="eyebrow a fade">Conclusão</p>
+    <h2 class="a" style="--d:1">O espaço público se faz com pessoas</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 680px;gap:48px;align-items:stretch">
+    <div class="col" style="gap:22px">
+      <p class="a left" style="--d:2"><b class="k">Não é só forma física:</b> o espaço público se constitui pelas ações, relações e disputas que acontecem nele.</p>
+      <p class="a left" style="--d:3"><b class="k">Revitalizar não basta:</b> a paisagem e a imagem mudam, mas desigualdades e conflitos permanecem.</p>
+      <p class="a left" style="--d:4"><b class="k">Marco Zero:</b> planejado para lazer e grandes eventos, ganhou também sentidos políticos e coletivos.</p>
+    </div>
+    <div class="step" style="background:var(--terra);border-radius:16px;padding:40px;display:flex;flex-direction:column;gap:16px;justify-content:center">
+      <p class="tag" style="color:#F3D2C2">Para o debate</p>
+      <p style="font-family:var(--serif);font-size:34px;line-height:1.4;color:var(--paper)">Quando uma cidade é revitalizada para atrair visitantes, como garantir que seus espaços continuem pertencendo também às pessoas que vivem e convivem neles?</p>
+    </div>
+  </div>
+  <div class="a fade" style="--d:6;display:flex;flex-direction:column;gap:6px;border-top:2px solid var(--line);padding-top:20px">
+    <p class="tag">Referência</p>
+    <p class="small">LEITE, Rogério Proença. Localizando o espaço público: <i>gentrification</i> e cultura urbana. <b>Revista Crítica de Ciências Sociais</b>, n. 83, p. 35–54, dez. 2008. DOI: 10.4000/rccs.436.</p>
+  </div>
+  <div class="aside-notes">Para concluir: a principal ideia do artigo é que os espaços públicos não são definidos só pela forma física, mas pelas ações, relações e disputas que acontecem neles. A revitalização do Recife Antigo transformou a paisagem e a imagem do bairro, mas não eliminou desigualdades nem conflitos. E o Marco Zero mostra que um espaço planejado para lazer e espetáculo pode ganhar significados políticos e coletivos. Por isso o autor conclui que a fragmentação da cidade em diferentes lugares não elimina o sentido público da vida urbana, mas o torna mais complexo. [Clique para a pergunta.] Deixamos uma pergunta para o debate: quando uma cidade é revitalizada para atrair visitantes, como garantir que seus espaços continuem pertencendo também às pessoas que vivem e convivem neles? Obrigado(a).</div>
+</section>
+
+<div class="foot" id="foot"><span>Leite (2008) · Localizando o espaço público</span><span id="foot-n"></span></div>
+</main>
+
+<nav class="hud" id="hud" aria-label="Controles">
+  <button id="btn-prev" title="Anterior (←)">←</button>
+  <span class="count" id="count">1 / 12</span>
+  <button id="btn-next" title="Próximo (→ ou espaço)">→</button>
+  <button id="btn-full" title="Tela cheia (F)">Tela cheia</button>
+</nav>
+
+<aside class="notes" id="notes">
+  <h4>Notas do apresentador</h4>
+  <p class="n-title" id="n-title"></p>
+  <p class="n-body" id="n-body"></p>
+  <p class="n-keys"><kbd>→</kbd> / <kbd>espaço</kbd> avançar · <kbd>←</kbd> voltar · <kbd>N</kbd> notas · <kbd>P</kbd> apresentador · <kbd>F</kbd> tela cheia · <kbd>Home</kbd>/<kbd>End</kbd> início/fim</p>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
