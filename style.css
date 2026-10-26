@@ -295,3 +295,28 @@ body.show-hud .hud, .hud:hover { opacity: 1; }
   .slide, .step { transition: none; }
   .slide.active .a, .slide.active .ph-bg, .compass { animation: none; opacity: 1; }
 }
+
+/* ===== Celular ===== */
+.stage { position: fixed; transform: translate(-50%, -50%) rotate(var(--r, 0deg)) scale(var(--s, 1)); touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+html.rot .progress { left: auto; right: 0; top: 0; width: 4px !important; height: var(--pw, 0%); transition: height .5s var(--ease); }
+html.rot .hud { display: none; }
+.hint { position: fixed; left: 50%; top: calc(18px + env(safe-area-inset-top, 0px)); transform: translateX(-50%); z-index: 40;
+  display: flex; align-items: center; gap: 10px; white-space: nowrap; max-width: calc(100vw - 32px);
+  padding: 12px 18px; border-radius: 999px; background: var(--terra-l); color: var(--ink); font: 700 15px var(--sans);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .45); transition: opacity .35s ease; pointer-events: none; }
+.hint.out { opacity: 0; }
+.hint[hidden], .fs-btn[hidden] { display: none !important; }
+.fs-btn { position: fixed; z-index: 35; top: calc(14px + env(safe-area-inset-top, 0px)); right: calc(14px + env(safe-area-inset-right, 0px));
+  display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 14px 0 12px; border: 0; border-radius: 999px; cursor: pointer;
+  background: rgba(20, 27, 30, .72); color: #F5F1EA; font: 600 14px var(--sans); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  opacity: .7; transition: opacity .3s; -webkit-tap-highlight-color: transparent; }
+.fs-btn:hover, .fs-btn:focus-visible { opacity: 1; }
+.fs-btn:focus-visible { outline: 2px solid var(--terra-l); outline-offset: 2px; }
+.fs-btn svg { flex: none; }
+.is-full .fs-btn { opacity: 0; pointer-events: none; }
+html.is-full body.show-hud .fs-btn { opacity: .85; pointer-events: auto; }
+html.rot .fs-btn { top: auto; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); right: calc(14px + env(safe-area-inset-right, 0px)); transform: rotate(90deg); transform-origin: 50% 50%; }
+@media (max-width: 700px), (max-height: 500px) { .fs-btn span { display: none; } .fs-btn { width: 42px; padding: 0; justify-content: center; } }
+html.rot .hint svg { animation: tilt 1.6s ease-in-out infinite; }
+@keyframes tilt { 0%, 30% { transform: rotate(0); } 60%, 100% { transform: rotate(-90deg); } }
+@media (prefers-reduced-motion: reduce) { html.rot .hint svg { animation: none; } }

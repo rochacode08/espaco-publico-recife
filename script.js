@@ -14,12 +14,66 @@
   let startTime = null;
 
   /* ---------- Escala do palco ---------- */
+  /* No celular em pé, o palco gira 90° para ocupar a tela: basta virar o aparelho. */
+  const coarseMQ = window.matchMedia('(pointer: coarse)');
+  const isTouch = () => coarseMQ.matches || navigator.maxTouchPoints > 0;
+  let rot = false, swiped = 0;
   function fit() {
-    const s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    const w = window.innerWidth, h = window.innerHeight;
+    rot = isTouch() && h > w && w < 600;
+    document.documentElement.classList.toggle('rot', rot);
+    const s = rot ? Math.min(h / 1920, w / 1080) : Math.min(w / 1920, h / 1080);
     stage.style.setProperty('--s', s);
+    stage.style.setProperty('--r', rot ? '90deg' : '0deg');
   }
   window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', () => setTimeout(fit, 200));
+  window.addEventListener('load', fit);
+  if (window.visualViewport) window.visualViewport.addEventListener('resize', fit);
+  requestAnimationFrame(fit);
   fit();
+
+  const hint = document.createElement('div');
+  hint.className = 'hint';
+  hint.setAttribute('role', 'status');
+  hint.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><span></span>';
+  hint.hidden = true;
+  document.body.appendChild(hint);
+  let hintTimer = 0;
+  function hideHint() {
+    if (hint.hidden) return;
+    hint.classList.add('out'); clearTimeout(hintTimer);
+    setTimeout(() => { hint.hidden = true; }, 400);
+  }
+  function showHint() {
+    if (!isTouch()) return;
+    hint.querySelector('span').textContent = rot ? 'Vire o celular na horizontal' : 'Toque para avançar · deslize para voltar';
+    hint.hidden = false;
+    hintTimer = setTimeout(hideHint, rot ? 5000 : 3500);
+  }
+  window.addEventListener('load', () => setTimeout(showHint, 300));
+
+  /* Botão fixo de tela cheia (também no celular) */
+  const ICON_IN = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const ICON_OUT = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const fsBtn = document.createElement('button');
+  fsBtn.type = 'button';
+  fsBtn.className = 'fs-btn';
+  const deEl = document.documentElement;
+  if (!(deEl.requestFullscreen || deEl.webkitRequestFullscreen)) fsBtn.hidden = true;   // iPhone não permite tela cheia em páginas
+  function syncFsBtn() {
+    const on = !!(document.fullscreenElement || document.webkitFullscreenElement);
+    deEl.classList.toggle('is-full', on);
+    fsBtn.innerHTML = (on ? ICON_OUT : ICON_IN) + `<span>${on ? 'Sair da tela cheia' : 'Tela cheia'}</span>`;
+    fsBtn.setAttribute('aria-label', on ? 'Sair da tela cheia' : 'Tela cheia (F)');
+    fsBtn.title = on ? 'Sair da tela cheia (F)' : 'Tela cheia (F)';
+    setTimeout(fit, 120);
+  }
+  fsBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleFull(); });
+  document.addEventListener('fullscreenchange', syncFsBtn);
+  document.addEventListener('webkitfullscreenchange', syncFsBtn);
+  document.body.appendChild(fsBtn);
+  syncFsBtn();
 
   /* ---------- Imagens: substituem o marcador se o arquivo existir ---------- */
   stage.querySelectorAll('.ph[data-img]').forEach((ph) => {
@@ -36,6 +90,17 @@
   });
 
   /* ---------- Vídeos: sem som, em repetição, tocando só no slide ativo ---------- */
+  function toBlobUrl(u) {
+    if (!u || !u.startsWith('data:')) return u;
+    try {
+      const comma = u.indexOf(',');
+      const mime = u.slice(5, u.indexOf(';'));
+      const bin = atob(u.slice(comma + 1));
+      const bytes = new Uint8Array(bin.length);
+      for (let k = 0; k < bin.length; k++) bytes[k] = bin.charCodeAt(k);
+      return URL.createObjectURL(new Blob([bytes], { type: mime }));
+    } catch (err) { return u; }
+  }
   stage.querySelectorAll('.ph[data-video]').forEach((ph) => {
     const v = document.createElement('video');
     v.className = 'ph-bg';
@@ -44,7 +109,7 @@
     v.playsInline = true;
     v.preload = 'auto';
     v.addEventListener('loadeddata', () => ph.classList.add('has-img'), { once: true });
-    v.src = ph.dataset.video;
+    v.src = toBlobUrl(ph.dataset.video);
     ph.prepend(v);
   });
 
@@ -91,6 +156,7 @@
     foot.classList.toggle('on-dark', s.classList.contains('dark'));
     count.textContent = `${i + 1} / ${total}`;
     progress.style.width = `${(i / (total - 1)) * 100}%`;
+    progress.style.setProperty('--pw', `${(i / (total - 1)) * 100}%`);
     nTitle.textContent = `${i + 1}. ${s.dataset.title || ''}`;
     nBody.textContent = notesOf(s);
     history.replaceState(null, '', `#${i + 1}`);
@@ -112,17 +178,20 @@
 
   stage.addEventListener('click', (e) => {
     if (window.getSelection().toString()) return;
+    if (Date.now() - swiped < 600) return;
     const r = stage.getBoundingClientRect();
-    (e.clientX < r.left + r.width * 0.25) ? prev() : next();
+    const f = rot ? (e.clientY - r.top) / r.height : (e.clientX - r.left) / r.width;
+    (f < 0.25) ? prev() : next();
   });
 
-  let tx = null;
-  document.addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; }, { passive: true });
+  let tx = null, ty = null;
+  document.addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; hideHint(); }, { passive: true });
   document.addEventListener('touchend', (e) => {
     if (tx === null) return;
-    const dx = e.changedTouches[0].clientX - tx;
-    if (Math.abs(dx) > 50) (dx < 0 ? next : prev)();
-    tx = null;
+    const ex = e.changedTouches[0].clientX - tx, ey = e.changedTouches[0].clientY - ty;
+    const dx = rot ? ey : ex, dy = rot ? -ex : ey;   // no palco girado, o eixo horizontal do slide é o vertical da tela
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) { swiped = Date.now(); (dx < 0 ? next : prev)(); }
+    tx = ty = null;
   });
 
   /* ---------- Controles ---------- */
@@ -131,12 +200,20 @@
   document.getElementById('btn-full').onclick = toggleFull;
 
   function toggleFull() {
-    if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
-    else document.exitFullscreen?.();
+    const de = document.documentElement;
+    if (!(document.fullscreenElement || document.webkitFullscreenElement)) {
+      const req = (de.requestFullscreen || de.webkitRequestFullscreen)?.call(de);
+      const lock = () => { try { screen.orientation?.lock?.('landscape')?.catch?.(() => {}); } catch (err) {} };
+      if (req && req.then) req.then(lock, () => {}); else lock();
+    }
+    else (document.exitFullscreen || document.webkitExitFullscreen)?.call(document);
   }
 
   let hudTimer;
+  let lastTouch = 0;
+  document.addEventListener('touchstart', () => { lastTouch = Date.now(); }, { passive: true });
   document.addEventListener('mousemove', () => {
+    if (Date.now() - lastTouch < 1200) return;   // toque no celular não abre a barra de controles
     document.body.classList.add('show-hud');
     clearTimeout(hudTimer);
     hudTimer = setTimeout(() => document.body.classList.remove('show-hud'), 2500);

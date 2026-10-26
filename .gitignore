@@ -2,3 +2,8 @@
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Materiais de apoio (ficam só no computador)
+*.docx
+*.pptx
+Apresentação - *.html
